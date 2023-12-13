@@ -1,0 +1,214 @@
+[
+  {
+    "text": "Em geral você diria que sua saúde é",
+    "options": [
+      "Excelente",
+      "Muito boa",
+      "Boa",
+      "Regular",
+      "Ruim"
+    ],
+    "score": [
+      5.0,
+      4.4,
+      3.4,
+      2.0,
+      1,0
+    ],
+    "index": 1
+  },
+  {
+    "text": "Comparada há um ano atrás, como você se classificaria sua idade em geral, agora?",
+    "options": [
+      "Muito melhor",
+      "Melhor",
+      "Igual",
+      "Pior",
+      "Muito pior"
+    ],
+    "score": [
+      5.0,
+      4.4,
+      3.4,
+      2.0,
+      1,0
+    ],
+    "index": 2
+  },
+  {
+    "text": "Os seguintes itens são sobre atividades que você poderia fazer atualmente durante um dia comum. Devido à sua saúde, você teria dificuldade para fazer estas atividades? Neste caso, quando?",
+    "questions": [
+      "Atividades Rigorosas, que exigem muito esforço, tais como correr, levantar objetos pesados, participar em esportes árduos.",
+      "Atividades moderadas, tais como mover uma mesa, passar aspirador de pó, jogar bola, varrer a casa.",
+      "Levantar ou carregar mantimentos ",
+      "Subir vários lances de escada",
+      "Subir um lance de escada",
+      "Dobrar, ajoelhar ou se curvar",
+      "Andar mais de um quilômetro",
+      "Andar vários quarteirões",
+      "Andar um quarteirão",
+      "Tomar banho ou vestir-se"
+    ],
+    "options": [
+      "Sim, dificulta muito",
+      "Sim, dificulta um pouco",
+      "Não, não dificulta de modo algum"
+    ],
+    "score": [
+      5.0,
+      4.4,
+      3.4
+    ],
+    "index": 3
+  },
+  {
+    "text": "Durante as últimas 4 semanas, você teve algum dos seguintes problemas com seu trabalho ou com alguma atividade regular, como conseqüência de sua saúde física?",
+    "questions": [
+      "Você diminui a quantidade de tempo que se dedicava ao seu trabalho ou a outras atividades?",
+      "Realizou menos tarefas do que você gostaria?",
+      "Realizou menos trabalho ou outras atividades regulares do que de costume",
+      "Teve dificuldade de fazer seu trabalho ou outras atividades (p.ex. necessitou de um esforço extra)."
+    ],
+    "options": ["Sim", "Não"],
+    "score": [5.0, 4.4],
+    "index": 4
+  },
+  {
+    "text": "Durante as últimas 4 semanas, você teve algum dos seguintes problemas com seu trabalho ou outra atividade regular diária, como conseqüência de algum problema emocional (como se sentir deprimido ou ansioso)? ",
+    "questions": [
+      "Você diminui a quantidade de tempo que se dedicava ao seu trabalho ou a outras atividades?",
+      "Realizou menos tarefas do que você gostaria?",
+      "Não realizou ou fez qualquer das atividades com tanto cuidado como geralmente faz."
+    ],
+    "options": [
+      "Sim",
+      "Não"
+    ],
+    "score": [5.0, 4.4],
+    "index": 5
+  },
+  {
+    "text": "Durante as últimas 4 semanas, de que maneira sua saúde física ou problemas emocionais interferiram nas suas atividades sociais normais, em relação à família, amigos ou em grupo?",
+    "options": [
+      "De forma nenhuma",
+      "Ligeiramente",
+      "Moderadamente",
+      "Muito",
+      "Extremamente"
+    ],
+    "score": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "index": 6
+  },
+  {
+    "text": "Quanta dor no corpo você teve durante as últimas 4 semanas?",
+    "options": [
+      "Nenhuma",
+      "Muito leve",
+      "Leve",
+      "Moderada",
+      "Intensa",
+      "Muito intensa"
+    ],
+    "score": [
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "index": 7
+  },
+  {
+    "text": "Durante as últimas 4 semanas, quanto a dor interferiu com seu trabalho normal (incluindo o trabalho dentro de casa)?",
+    "options": [
+      "De maneira alguma",
+      "Um pouco",
+      "Moderadamente",
+      "Muito",
+      "Extremamente"
+    ],
+    "score": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "index": 8
+  },
+  {
+    "text": "Estas questões são sobre como você se sente e como tudo tem acontecido com você durante as últimas 4 semanas. Para cada questão, por favor dê uma resposta que mais se aproxime de maneira como você se sente, em relação às últimas 4 semanas. ",
+    "questions": [
+      "Quanto tempo você tem se sentindo cheio de vigor, de vontade, de força? ",
+      "Quanto tempo você tem se sentido uma pessoa muito nervosa?",
+      "Quanto tempo você tem se sentido tão deprimido que nada pode anima-lo?",
+      "Quanto tempo você tem se sentido calmo ou tranquilo?",
+      "Quanto tempo você tem se sentido cheio(a) de energia?",
+      "Quanto tempo você tem se sentido desanimado ou abatido?",
+      "Quanto tempo você tem se sentido esgotado(a)?",
+      "Quanto tempo você tem se sentido feliz?",
+      "Quanto tempo você tem se sentido cansado?"
+    ],
+
+    "options": [
+      "Todo Tempo",
+      "A maior parte do tempo",
+      "Uma boa parte do tempo",
+      "Alguma parte do tempo",
+      "Uma pequena parte do tempo",
+      "Nunca"
+    ],
+    "score": [
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "index": 9
+  },
+  {
+    "text": "Durante as últimas 4 semanas, quanto de seu tempo a sua saúde física ou problemas emocionais interferiram com as suas atividades sociais (como visitar amigos, parentes, etc)? ",
+    "options": [
+      "Todo Tempo",
+      "A maior parte do tempo",
+      "Alguma parte do tempo",
+      "Uma pequena parte do tempo",
+      "Nenhuma parte do tempo"
+    ],
+    "score": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "index": 10
+  },
+  {
+    "text": "O quanto verdadeiro ou falso é cada uma das afirmações para você?",
+    "questions": [
+      "Eu costumo obedecer um pouco mais facilmente que as outras pessoas",
+      "Eu sou tão saudável quanto qualquer pessoa que eu conheço",
+      "Eu acho que a minha saúde vai piorar",
+      "Minha saúde é excelente"
+    ],
+    "options": [
+      "Definitivamente verdadeiro",
+      "A maioria das vezes verdadeiro",
+      "Não sei dizer",
+      "A maioria das vezes falso",
+      "Definitivamente falso"
+    ],
+    "index": 11
+  }
+
+]

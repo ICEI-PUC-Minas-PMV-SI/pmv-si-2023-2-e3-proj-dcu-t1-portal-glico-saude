@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/receitas.css">
+    <title>Portal Glico Saúde</title>
+    <script type="text/javascript" src="../scripts/receitas-like.js"></script>
+</head>
+<body>
+    <header>
+      <div class="logo">
+        <img src="../assets/images/logo.png" alt="logo">
+          <a href="../pages/home.html"> <h1>Portal Glico Saúde</h1> </a>
+      </div>
+        <div class="menuPerfil">
+            <ul>
+              <li class="dropdown">
+                <img src="../assets/images/perfil.png" alt="perfil">
+                  <div class="dropdown-menuPerfil">
+                    <a href="../pages/perfil.html">Meus Dados</a>
+                    <a href="../pages/minha-saude">Avaliar saúde</a>
+                    <a href="receitas-favoritas.html">Receitas Favoritas</a>
+                  </div>
+              </li>
+            </ul>
+          </div>
+    </header>
+
+    <nav>
+        <div class="menu">
+            <ul>
+              <li>
+                <a href="../pages/home.html">Início</a>
+              </li>
+              <li class="dropdown">
+                <a href="../pages/bons-habitos.html">Bons Hábitos</a>
+              </li>
+              <li class="dropdown">
+                <a href="../pages/receitas.html">Receitas Fáceis</a>
+                <div class="dropdown-menu">
+                  <a href="../pages/aves.html">Aves</a>
+                  <a href="../pages/bolos.html">Bolos e Tortas</a>
+                  <a href="../pages/carnes.html">Carnes</a>
+                  <a href="../pages/doces.html">Doces e Sobremesas</a>
+                  <a href="../pages/massas.html">Massas</a>
+                  <a href="../pages/peixes.html">Peixes e Frutos do Mar</a>
+                  <a href="../pages/saladas.html">Saladas e Molhos</a>
+                  <a href="saiba-mais.html">Saiba Mais</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="search">
+            <input type="text" id = "search-text" onkeyup="search()" placeholder="Buscar receitas...">
+            <button type="submit" onclick = "search()">Buscar</button>
+          </div>
+    </nav>
+
+    <main>
+        <section class="featured-recipes">
+            <div class="recipe-card">
+                <img src="https://diabetes.org.br/wp-content/uploads/2021/06/estrogonofe-de-frango-com-berinjela-1.jpg" alt="estrogonofe-de-frango-com-berinjela-1">
+                <h2>Estrogonofe de frango com berinjela</h2>
+                <button class="like-button" onclick="like(1)" id="1">Curtir</button>
+                <a class="view-recipe-button" href="receitas-detalhe.html?id=1"target="_blank">Ver receita</a>
+            </div>
+            <div class="recipe-card">
+                <img src="https://diabetes.org.br/wp-content/uploads/2021/06/Salpicao-com-Cevadinha.jpg" alt="Salpicao-com-Cevadinha">
+                <h2>Salpicão com Cevadinha</h2>
+                <button class="like-button" onclick="like(2)" id="2">Curtir</button>
+                <a class="view-recipe-button" href="receitas-detalhe.html?id=2" target="_blank">Ver receita</a>
+            </div>
+            <div class="recipe-card">
+                <img src="https://saborosoesaudavel.com.br/wp-content/uploads/2023/07/peito-de-frango-com-legumes-para-diabeticos.jpg" alt="peito-de-frango-com-legumes-para-diabeticos">
+                <h2>Peito de Frango com Legumes</h2>
+                <button class="like-button" onclick="like(3)" id="3">Curtir</button>
+                <a class="view-recipe-button" href="receitas-detalhe.html?id=3"target="_blank">Ver receita</a>
+            </div>
+            <div class="recipe-card">
+                <img src="https://diabetes.org.br/wp-content/uploads/2021/06/Peru-Recheado-com-Farofa-de-Frutas.jpg" alt="Peru-Recheado-com-Farofa-de-Frutas">
+                <h2>Peru Recheado com Farofa de Frutas</h2>
+                <button class="like-button" onclick="like(4)" id="4">Curtir</button>
+                <a class="view-recipe-button" href="receitas-detalhe.html?id=4"target="_blank">Ver receita</a>
+            </div>
+            <div class="recipe-card">
+                <img src="https://diabetes.org.br/wp-content/uploads/2021/06/Entrada-de-Chester.jpg" alt="Entrada-de-Chester">
+                <h2>Entrada de Chester</h2>
+                <button class="like-button" onclick="like(5)" id="5">Curtir</button>
+                <a class="view-recipe-button" href="receitas-detalhe.html?id=5"target="_blank">Ver receita</a>
+            </div>
+
+            <!-- Adicione mais cards de receita aqui -->
+        </section>
+    </main>
+
+    <footer-component></footer-component>
+    <script src="./minha-saude/components/footer/footer.js" type="module"></script>
+</body>
+</html>

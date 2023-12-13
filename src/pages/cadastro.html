@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/cadastro_v2.css">
+  <title>Cadastro</title>
+</head>
+
+<body>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/perfil.css">
+    <title>Perfil</title>
+  </head>
+
+  <body>
+
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../assets/css/home.css">
+      <title>Portal Glico Saúde</title>
+    </head>
+
+    <div class="nav">
+      <header>
+        <div class="logo">
+          <img src="../assets/images/logo.png" alt="logo">
+            <a href="../pages/home.html"> <h1>Portal Glico Saúde</h1> </a>
+        </div>
+
+        <div class="menuPerfil">
+          <ul>
+            <li class="dropdown">
+              <img src="../assets/images/perfil.png" alt="perfil">
+              <div class="dropdown-menuPerfil">
+                <a href="../pages/perfil.html">Meus Dados</a>
+                <a href="../pages/minha-saude">Avaliar saúde</a>
+                <a href="../pages/receitas-favoritas.html">Receitas Favoritas</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </header>
+    </div>
+
+    <body>
+      <div class="menu">
+        <ul>
+          <li>
+            <a href="../pages/home.html">Início</a>
+          </li>
+          <li class="dropdown">
+            <a href="../pages/bons-habitos.html">Bons Hábitos</a>
+          </li>
+          <li class="dropdown">
+            <a href="../pages/receitas.html">Receitas Fáceis</a>
+            <div class="dropdown-menu">
+              <a href="../pages/aves.html">Aves</a>
+              <a href="../pages/bolos.html">Bolos e Tortas</a>
+              <a href="../pages/carnes.html">Carnes</a>
+              <a href="../pages/doces.html">Doces e Sobremesas</a>
+              <a href="../pages/massas.html">Massas</a>
+              <a href="../pages/peixes.html">Peixes e Frutos do Mar</a>
+              <a href="../pages/saladas.html">Saladas e Molhos</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="main-container">
+        <main class="container">
+          <h1>Cadastro</h1>
+          <form class="registration-form">
+            <div class="form-group">
+              <label for="name">Nome:</label>
+              <input type="text" id="name" placeholder="Digite seu nome">
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail:</label>
+              <input type="email" id="email" placeholder="Digite seu e-mail">
+            </div>
+            <div class="form-group">
+              <label for="password">Senha:</label>
+              <input type="password" id="password" placeholder="Digite sua senha">
+            </div>
+            <div class="form-group">
+              <label for="confirmPassword">Confirme a senha:</label>
+              <input type="password" id="confirmPassword" placeholder="Confirme sua senha">
+            </div>
+            <p id="error-message" style="color: red;"></p> <!-- Mensagem de erro -->
+
+            <div id="submit-btn">
+              <button type="submit">Cadastrar</button>
+            </div>
+          </form>
+        </main>
+      </div>
+      <footer-component></footer-component>
+      <script src="./minha-saude/components/footer/footer.js" type="module"></script>
+
+      <script>
+        document.querySelector('.registration-form').addEventListener('submit', function (event) {
+          event.preventDefault();
+
+          // Capturando os valores dos campos
+          const name = document.getElementById('name').value;
+          const email = document.getElementById('email').value;
+          const password = document.getElementById('password').value;
+          const confirmPassword = document.getElementById('confirmPassword').value;
+          const errorMessage = document.getElementById('error-message');
+
+          // Validações
+          const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#]).{8,}$/;
+          const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+          // Resetando as mensagens e estilos
+          errorMessage.textContent = '';
+          document.getElementById('email').style.borderColor = "#ccc";
+          document.getElementById('password').style.borderColor = "#ccc";
+          document.getElementById('confirmPassword').style.borderColor = "#ccc";
+
+          if (!emailRegex.test(email)) {
+            errorMessage.textContent = 'E-mail inválido. ';
+            document.getElementById('email').style.borderColor = "red";
+            return;
+          }
+
+          if (!passwordRegex.test(password)) {
+            alert('A senha deve conter pelo menos 8 caracteres, uma letra maiúscula, um número e um caractere especial.');
+            document.getElementById('password').style.borderColor = "red";
+            return;
+          }
+
+          if (password !== confirmPassword) {
+            errorMessage.textContent += ' As senhas não são iguais.';
+            document.getElementById('password').style.borderColor = "red";
+            document.getElementById('confirmPassword').style.borderColor = "red";
+            return;
+          }
+
+          // Criando objeto de usuário
+          const newUser = {
+            name: name,
+            email: email,
+            password: password,
+            dataCadastro: new Date(),
+            isAdmin: false
+          };
+
+          // Recuperando a lista de usuários existente ou criando uma nova se ela não existir
+          const users = JSON.parse(localStorage.getItem('users')) || [];
+
+          // Verificando se o e-mail já foi cadastrado
+          if (users.some(user => user.email === email)) {
+            errorMessage.textContent = 'E-mail já cadastrado.';
+            document.getElementById('email').style.borderColor = "red";
+            return;
+          }
+
+          // Adicionando novo usuário à lista
+          users.push(newUser);
+          localStorage.setItem('users', JSON.stringify(users));
+          localStorage.setItem('currentUser', JSON.stringify({ email: newUser.email }));
+          window.location.href = '../pages/perfil.html';
+
+          // Salvando a lista atualizada no LocalStorage
+          localStorage.setItem('users', JSON.stringify(users));
+          alert('Usuário cadastrado com sucesso!');
+        });
+      </script>
+    </body>
+
+</html>

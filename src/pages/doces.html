@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/receitas.css">
+    <title>Portal Glico Saúde</title>
+    <script type="text/javascript" src="../scripts/receitas-like.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../assets/images/logo.png" alt="logo">
+              <a href="../pages/home.html"> <h1>Portal Glico Saúde</h1> </a>
+          </div>
+        <div class="menuPerfil">
+            <ul>
+              <li class="dropdown">
+                <img src="../assets/images/perfil.png" alt="perfil">
+                  <div class="dropdown-menuPerfil">
+                    <a href="../pages/perfil.html">Meus Dados</a>
+                    <a href="../pages/minha-saude">Avaliar saúde</a>
+                    <a href="receitas-favoritas.html">Receitas Favoritas</a>
+                  </div>
+              </li>
+            </ul>
+          </div>
+    </header>
+
+    <nav>
+        <div class="menu">
+            <ul>
+              <li>
+                <a href="../pages/home.html">Início</a>
+              </li>
+              <li class="dropdown">
+                <a href="../pages/bons-habitos.html">Bons Hábitos</a>
+              </li>
+              <li class="dropdown">
+                <a href="../pages/receitas.html">Receitas Fáceis</a>
+                <div class="dropdown-menu">
+                  <a href="../pages/aves.html">Aves</a>
+                  <a href="../pages/bolos.html">Bolos e Tortas</a>
+                  <a href="../pages/carnes.html">Carnes</a>
+                  <a href="../pages/doces.html">Doces e Sobremesas</a>
+                  <a href="../pages/massas.html">Massas</a>
+                  <a href="../pages/peixes.html">Peixes e Frutos do Mar</a>
+                  <a href="../pages/saladas.html">Saladas e Molhos</a>
+                  <a href="saiba-mais.html">Saiba Mais</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="search">
+            <input type="text" id = "search-text" onkeyup="search()" placeholder="Buscar receitas...">
+            <button type="submit" onclick = "search()">Buscar</button>
+          </div>
+    </nav>
+
+    <main>
+        <section class="featured-recipes">
+            <div class="recipe-card">
+                <img src="https://diabetes.org.br/wp-content/uploads/2021/06/Abacaxi-a-Polinesia.jpg" alt="Abacaxi-a-Polinesia">
+                <h2>Abacaxi a Polinésia</h2>
+                <button class="like-button" onclick ="like(19)" id="19">Curtir</button>
+                <a class="view-recipe-button" href="receitas-detalhe.html?id=19"target="_blank">Ver receita</a>
+            </div>
+            <div class="recipe-card">
+                <img src="https://diabetes.org.br/wp-content/uploads/2021/06/Bavaroise-de-Limao.jpg" alt="Bavaroise-de-Limao">
+                <h2>Bavaroise de Limão</h2>
+                <button class="like-button" onclick ="like(20)" id="20">Curtir</button>
+                <a class="view-recipe-button" href="receitas-detalhe.html?id=20" target="_blank">Ver receita</a>
+            </div>
+            <div class="recipe-card">
+                <img src="https://diabetes.org.br/wp-content/uploads/2021/06/Bolo-de-brigadeiro.jpg" alt="Bolo-de-brigadeiro">
+                <h2>Bolo de brigadeiro</h2>
+                <button class="like-button" onclick ="like(21)" id="21">Curtir</button>
+                <a class="view-recipe-button" href="receitas-detalhe.html?id=21"target="_blank">Ver receita</a>
+            </div>
+            <div class="recipe-card">
+                <img src="https://diabetes.org.br/wp-content/uploads/2021/06/Brigadeirao.jpg" alt="Brigadeirao">
+                <h2>Brigadeirão</h2>
+                <button class="like-button" onclick ="like(22)" id="22">Curtir</button>
+                <a class="view-recipe-button" href="receitas-detalhe.html?id=22"target="_blank">Ver receita</a>
+            </div>
+            <div class="recipe-card">
+                <img src="https://diabetes.org.br/wp-content/uploads/2021/06/Cassata-Siciliana.jpg" alt="Cassata-Siciliana">
+                <h2>Cassata Siciliana</h2>
+                <button class="like-button" onclick ="like(23)" id="23">Curtir</button>
+                <a class="view-recipe-button" href="receitas-detalhe.html?id=23"target="_blank">Ver receita</a>
+            </div>
+            <div class="recipe-card">
+                <img src="https://diabetes.org.br/wp-content/uploads/2021/06/Christmas-Cake.jpg" alt="Christmas-Cake">
+                <h2>Christmas Cake</h2>
+                <button class="like-button" onclick ="like(24)" id="24">Curtir</button>
+                <a class="view-recipe-button" href="receitas-detalhe.html?id=24"target="_blank">Ver receita</a>
+            </div>
+            <div class="recipe-card">
+                <img src="https://diabetes.org.br/wp-content/uploads/2021/06/Cupcake-de-morango.jpg" alt="Cupcake-de-morango">
+                <h2>Cupcake de morango</h2>
+                <button class="like-button" onclick ="like(25)" id="25">Curtir</button>
+                <a class="view-recipe-button" href="receitas-detalhe.html?id=25"target="_blank">Ver receita</a>
+            </div>
+            <div class="recipe-card">
+                <img src="https://diabetes.org.br/wp-content/uploads/2021/06/Enrolado-de-chocolate.jpg" alt="Enrolado-de-chocolate">
+                <h2>Enrolado de chocolate</h2>
+                <button class="like-button" onclick ="like(26)" id="26">Curtir</button>
+                <a class="view-recipe-button" href="receitas-detalhe.html?id=26"target="_blank">Ver receita</a>
+            </div>
+            <div class="recipe-card">
+                <img src="https://diabetes.org.br/wp-content/uploads/2021/06/Manjar-dos-deuses.jpg" alt="Manjar-dos-deuses">
+                <h2>Manjar dos deuses</h2>
+                <button class="like-button" onclick ="like(27)" id="27">Curtir</button>
+                <a class="view-recipe-button" href="receitas-detalhe.html?id=27"target="_blank">Ver receita</a>
+            </div>
+            <div class="recipe-card">
+                <img src="https://diabetes.org.br/wp-content/uploads/2021/06/Pave-de-Sorvete-com-Brownie.jpg" alt="Pave-de-Sorvete-com-Brownie">
+                <h2>Pavê de Sorvete com Brownie</h2>
+                <button class="like-button" onclick ="like(28)" id="28">Curtir</button>
+                <a class="view-recipe-button" href="receitas-detalhe.html?id=28"target="_blank">Ver receita</a>
+            </div>
+            <div class="recipe-card">
+                <img src="https://diabetes.org.br/wp-content/uploads/2021/06/Salada-de-frutas-ao-forno-com-creme-de-pessego.jpg" alt="Sobremesa-%E2%80%93-Brownie-de-Chocolate-com-Aveia">
+                <h2>Salada de frutas ao forno com creme de pêssego</h2>
+                <button class="like-button" onclick ="like(29)" id="29">Curtir</button>
+                <a class="view-recipe-button" href="receitas-detalhe.html?id=29"target="_blank">Ver receita</a>
+            </div>
+            <div class="recipe-card">
+                <img src="https://diabetes.org.br/wp-content/uploads/2021/06/Sobremesa-%E2%80%93-Brownie-de-Chocolate-com-Aveia.jpg" alt="Manjar-dos-deuses">
+                <h2>Sobremesa: Brownie de Chocolate com Aveia</h2>
+                <button class="like-button" onclick ="like(30)" id="30">Curtir</button>
+                <a class="view-recipe-button" href="receitas-detalhe.html?id=30"target="_blank">Ver receita</a>
+            </div>
+            <div class="recipe-card">
+                <img src="https://diabetes.org.br/wp-content/uploads/2021/06/Torta-de-mousse-de-maracuja.jpg" alt="Torta-de-mousse-de-maracuja">
+                <h2>Torta de mousse de maracujá</h2>
+                <button class="like-button" onclick ="like(31)" id="31">Curtir</button>
+                <a class="view-recipe-button" href="receitas-detalhe.html?id=31"target="_blank">Ver receita</a>
+            </div>
+        </section>
+    </main>
+
+    <footer-component></footer-component>
+
+    <script src="./minha-saude/components/footer/footer.js" type="module"></script>
+</body>
+</html>

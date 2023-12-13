@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/perfil.css">
+  <title>Perfil</title>
+</head>
+
+<body>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/home.css">
+    <title>Portal Glico Saúde</title>
+  </head>
+
+  <div class="nav">
+    <header>
+      <div class="logo">
+        <img src="../assets/images/logo.png" alt="logo">
+          <a href="../pages/home.html"> <h1>Portal Glico Saúde</h1> </a>
+      </div>
+
+      <div class="menuPerfil">
+        <ul>
+          <li class="dropdown">
+            <img src="../assets/images/perfil.png" alt="perfil">
+            <div class="dropdown-menuPerfil">
+              <a href="../pages/perfil.html">Meus Dados</a>
+              <a href="../pages/minha-saude">Avaliar saúde</a>
+              <a href="../pages/receitas-favoritas.html">Receitas Favoritas</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </header>
+  </div>
+
+  <body>
+    <div class="menu">
+      <ul>
+        <li>
+          <a href="../pages/home.html">Início</a>
+        </li>
+        <li class="dropdown">
+          <a href="../pages/bons-habitos.html">Bons Hábitos</a>
+        </li>
+        <li class="dropdown">
+          <a href="../pages/receitas.html">Receitas Fáceis</a>
+          <div class="dropdown-menu">
+            <a href="../pages/aves.html">Aves</a>
+            <a href="../pages/bolos.html">Bolos e Tortas</a>
+            <a href="../pages/carnes.html">Carnes</a>
+            <a href="../pages/doces.html">Doces e Sobremesas</a>
+            <a href="../pages/massas.html">Massas</a>
+            <a href="../pages/peixes.html">Peixes e Frutos do Mar</a>
+            <a href="../pages/saladas.html">Saladas e Molhos</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="main-container">
+      <main class="container">
+        <h1>Perfil do Usuário</h1>
+        <div class="section">
+          <div class="profile-info">
+            <div class="profile-picture">
+              <img src="../assets/images/profile.png" alt="Icone de Perfil">
+              <!-- <input class="file-label" type="file" id="photo" accept="image/*" placeholder=""> -->
+            </div>
+          </div>
+          <div class="profile-details">
+            <div>
+              <label for="name">Nome:</label>
+              <input type="text" id="name" value="Nome do Usuário">
+            </div>
+            <div>
+              <label for="email">E-mail:</label>
+              <input type="email" id="email" value="usuario@example.com">
+            </div>
+            <div>
+              <label for="newPassword">Nova Senha:</label>
+              <input type="password" id="newPassword" placeholder="Digite a nova senha">
+            </div>
+            <div>
+              <label for="confirmNewPassword">Confirmar Nova Senha:</label>
+              <input type="password" id="confirmNewPassword" placeholder="Confirme a nova senha">
+            </div>
+            <div style="display: flex; flex-direction: row; justify-content: left; gap: 10px">
+              <button id="updateProfileBtn">Atualizar Perfil</button>
+              <button id="deleteProfileBtn">Excluir Conta</button>
+            </div>
+          </div>
+        </div>
+
+    </div>
+    </main>
+    </div>
+    <footer-component></footer-component>
+    <script src="./minha-saude/components/footer/footer.js" type="module"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        const currentUserData = JSON.parse(localStorage.getItem('currentUser'));
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+
+        if (!currentUserData || !users.some(user => user.email === currentUserData.email)) {
+          window.location.href = 'login.html'; // Substitua com o caminho correto
+          return;
+        }
+
+        const user = users.find(user => user.email === currentUserData.email);
+        document.getElementById('name').value = user.name;
+        document.getElementById('email').value = user.email;
+
+        const updateProfileBtn = document.getElementById('updateProfileBtn');
+        updateProfileBtn.addEventListener('click', function () {
+          const newName = document.getElementById('name').value;
+          const newEmail = document.getElementById('email').value;
+          const newPassword = document.getElementById('newPassword').value;
+          const confirmNewPassword = document.getElementById('confirmNewPassword').value;
+          const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#]).{8,}$/;
+          const userIndex = users.findIndex(user => user.email === currentUserData.email);
+
+          // Verifica se a nova senha e a confirmação são iguais
+          if (newPassword !== confirmNewPassword) {
+            alert('As senhas não coincidem.');
+            return;
+          }
+
+          // Verifica se a nova senha segue o padrão
+          if (newPassword !== '' && !passwordRegex.test(newPassword)) {
+            alert('A senha deve conter pelo menos 8 caracteres, uma letra maiúscula, um número e um caractere especial.');
+            return;
+          }
+
+          if (userIndex !== -1) {
+            users[userIndex].name = newName;
+            users[userIndex].email = newEmail;
+
+            // Atualiza a senha apenas se ela passar nas verificações
+            if (newPassword !== '') {
+              users[userIndex].password = newPassword;
+            }
+
+            localStorage.setItem('users', JSON.stringify(users));
+            localStorage.setItem('currentUser', JSON.stringify({ email: newEmail }));
+
+            alert('Perfil atualizado com sucesso!');
+          } else {
+            alert('Ocorreu um problema, atualize a página e tente novamente!');
+          }
+        });
+      });
+      const deleteProfileBtn = document.getElementById('deleteProfileBtn');
+      deleteProfileBtn.addEventListener('click', function () {
+        const confirmDeletion = confirm('Tem certeza que deseja excluir sua conta?');
+        if (confirmDeletion) {
+          const currentUserEmail = JSON.parse(localStorage.getItem('currentUser')).email;
+          const users = JSON.parse(localStorage.getItem('users')) || [];
+          const updatedUsers = users.filter(user => user.email !== currentUserEmail);
+
+          localStorage.setItem('users', JSON.stringify(updatedUsers));
+          localStorage.removeItem('currentUser');
+          localStorage.removeItem('sf36');
+          localStorage.removeItem('user-info');
+          localStorage.removeItem('glicose');
+          window.location.href = '../pages/home.html';
+        }
+      });
+
+    </script>
+  </body>
+
+</html>

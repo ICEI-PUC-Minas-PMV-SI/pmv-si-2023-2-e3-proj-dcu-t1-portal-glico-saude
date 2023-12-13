@@ -1,0 +1,33 @@
+.select-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.select {
+  padding: 4px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+  /* background: url('arrow.png') no-repeat right center / 20px 20px; */
+  outline: none;
+}
+
+.select:hover {
+  border-color: #0056b3;
+}
+
+.select:active {
+  border-color: #0056b3;
+}
+
+.selectLabel {
+  margin-right: 5px;
+}

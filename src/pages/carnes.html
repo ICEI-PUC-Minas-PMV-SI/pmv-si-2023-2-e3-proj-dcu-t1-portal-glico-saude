@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/receitas.css">
+    <title>Portal Glico Saúde</title>
+    <script type="text/javascript" src="../scripts/receitas-like.js"></script>
+</head>
+<body>
+    <header>
+      <div class="logo">
+        <img src="../assets/images/logo.png" alt="logo">
+          <a href="../pages/home.html"> <h1>Portal Glico Saúde</h1> </a>
+      </div>
+        <div class="menuPerfil">
+            <ul>
+              <li class="dropdown">
+                <img src="../assets/images/perfil.png" alt="perfil">
+                  <div class="dropdown-menuPerfil">
+                    <a href="../pages/perfil.html">Meus Dados</a>
+                    <a href="../pages/minha-saude">Avaliar saúde</a>
+                    <a href="receitas-favoritas.html">Receitas Favoritas</a>
+                  </div>
+              </li>
+            </ul>
+          </div>
+    </header>
+
+    <nav>
+        <div class="menu">
+            <ul>
+              <li>
+                <a href="../pages/home.html">Início</a>
+              </li>
+              <li class="dropdown">
+                <a href="../pages/bons-habitos.html">Bons Hábitos</a>
+              </li>
+              <li class="dropdown">
+                <a href="../pages/receitas.html">Receitas Fáceis</a>
+                <div class="dropdown-menu">
+                  <a href="../pages/aves.html">Aves</a>
+                  <a href="../pages/bolos.html">Bolos e Tortas</a>
+                  <a href="../pages/carnes.html">Carnes</a>
+                  <a href="../pages/doces.html">Doces e Sobremesas</a>
+                  <a href="../pages/massas.html">Massas</a>
+                  <a href="../pages/peixes.html">Peixes e Frutos do Mar</a>
+                  <a href="../pages/saladas.html">Saladas e Molhos</a>
+                  <a href="saiba-mais.html">Saiba Mais</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="search">
+            <input type="text" id = "search-text" onkeyup="search()" placeholder="Buscar receitas...">
+            <button type="submit" onclick = "search()">Buscar</button>
+          </div>
+    </nav>
+
+    <main>
+        <section class="featured-recipes">
+            <div class="recipe-card">
+                <img src="https://diabetes.org.br/wp-content/uploads/2021/06/charutinho.jpg" alt="charutinho">
+                <h2>Charutinho caipira</h2>
+                <button class="like-button" onclick ="like(15)" id="15">Curtir</button>
+                <a class="view-recipe-button" href="receitas-detalhe.html?id=15"target="_blank">Ver receita</a>
+            </div>
+            <div class="recipe-card">
+                <img src="https://diabetes.org.br/wp-content/uploads/2021/06/Lombo-a-Provencal.jpg" alt="Lombo-a-Provencal">
+                <h2>Lombo a Provençal</h2>
+                <button class="like-button" onclick ="like(16)" id="16">Curtir</button>
+                <a class="view-recipe-button" href="receitas-detalhe.html?id=16" target="_blank">Ver receita</a>
+            </div>
+            <div class="recipe-card">
+                <img src="https://diabetes.org.br/wp-content/uploads/2021/06/maminha-ao-molho-de-ervas.jpg" alt="maminha-ao-molho-de-ervas">
+                <h2>Maminha ao molho de ervas</h2>
+                <button class="like-button" onclick ="like(17)" id="17">Curtir</button>
+                <a class="view-recipe-button" href="receitas-detalhe.html?id=17"target="_blank">Ver receita</a>
+            </div>
+            <div class="recipe-card">
+                <img src="https://diabetes.org.br/wp-content/uploads/2021/06/Pernil-Acebolado.jpg" alt="Pernil-Acebolado">
+                <h2>Pernil Acebolado</h2>
+                <button class="like-button" onclick ="like(18)" id="18">Curtir</button>
+                <a class="view-recipe-button" href="receitas-detalhe.html?id=18"target="_blank">Ver receita</a>
+            </div>
+        </section>
+    </main>
+
+    <footer-component></footer-component>
+
+    <script src="./minha-saude/components/footer/footer.js" type="module"></script>
+</body>
+</html>

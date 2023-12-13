@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../assets/css/receitas.css">
+        <title>Portal Glico Saúde</title>
+        <script type="text/javascript" src="../scripts/lista-receitas.js"></script>
+    </head>
+    <body>
+        <header>
+          <div class="logo">
+            <img src="../assets/images/logo.png" alt="logo">
+              <a href="../pages/home.html"> <h1>Portal Glico Saúde</h1> </a>
+          </div>
+            <div class="menuPerfil">
+                <ul>
+                  <li class="dropdown">
+                    <img src="../assets/images/perfil.png" alt="perfil">
+                      <div class="dropdown-menuPerfil">
+                        <a href="../pages/perfil.html">Meus Dados</a>
+                        <a href="../pages/minha-saude">Avaliar saúde</a>
+                        <a href="receitas-favoritas.html">Receitas Favoritas</a>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+        </header>
+
+        <nav>
+            <div class="menu">
+                <ul>
+                  <li>
+                    <a href="../pages/home.html">Início</a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="../pages/bons-habitos.html">Bons Hábitos</a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="../pages/receitas.html">Receitas Fáceis</a>
+                    <div class="dropdown-menu">
+                      <a href="../pages/aves.html">Aves</a>
+                      <a href="../pages/bolos.html">Bolos e Tortas</a>
+                      <a href="../pages/carnes.html">Carnes</a>
+                      <a href="../pages/doces.html">Doces e Sobremesas</a>
+                      <a href="../pages/massas.html">Massas</a>
+                      <a href="../pages/peixes.html">Peixes e Frutos do Mar</a>
+                      <a href="../pages/saladas.html">Saladas e Molhos</a>
+                      <a href="saiba-mais.html">Saiba Mais</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+        </nav>
+    
+    <main>
+        <article class="recipe-details">
+            <h2 id="Título">Título</h2>
+            <img id="Imagem" src="" alt="imagem" width="500" height="500"> <br>
+            <button id="like-button">...</button>
+            <h3>Ingredientes:</h3>
+            <ul id="Ingredientes">
+            </ul>
+            <h3>Modo de Preparo:</h3>
+            <p id="Preparo">
+                Modo de preparo.
+            </p>
+        </article>
+    </main>
+
+    <footer-component></footer-component>
+    <script src="./minha-saude/components/footer/footer.js" type="module"></script>
+</body>
+</html>

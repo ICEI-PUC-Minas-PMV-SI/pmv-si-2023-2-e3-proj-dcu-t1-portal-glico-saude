@@ -1,0 +1,249 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ECECEB;
+}
+
+header {
+    background-color: #BFD7ED;
+    padding: 20px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo img {
+    height: 55px;
+    width: 45px;
+}
+
+.logo a{
+    text-decoration-line: none;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #0C2D48; 
+}
+
+.nav{
+    background-color: #BFD7ED;
+    padding-bottom: 30px;
+    height: 20px;
+}
+
+nav div ul{
+    margin: 0px;
+}
+
+.menu {
+    background-color: #0C2D48;
+    text-align: center;
+}
+
+.menu li{
+    display: inline-block;
+}
+
+.menu li a{
+    display: block;
+    color:  #d1ddef;
+    text-decoration: none;
+    padding: 20px;
+    font-size: 18px;
+    height: 20px;
+}
+
+
+.menu li a:hover{
+    background-color: #BFD7ED;
+    color: #0C2D48;
+}
+
+.dropdown-menu{
+    position: absolute;
+    box-shadow: 0 0 2px #0C2D48;
+    display: none;
+    background-color: #0C2D48;
+}
+
+.dropdown-menu a{
+    display: block;
+    color: #d1ddef;
+}
+
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+
+
+.menuPerfil {
+    background-color: transparent;
+    text-align: center; 
+}
+
+.menuPerfil img{
+    height: 50px;
+    width: 85px;
+    padding-right: 10px;
+}
+
+.menuPerfil li{
+    display: inline-block;
+}
+
+.menuPerfil li a{
+    display: block;
+    color:  #d1ddef;
+    text-decoration: none;
+    padding: 25px;
+    padding-bottom: 40px;
+    font-size: 18px;
+    height: 20px;
+}
+
+
+.menuPerfil li a:hover{
+    background-color:#BFD7ED;
+    color: #0C2D48;
+}
+
+.dropdown-menuPerfil{
+    position: absolute;
+    box-shadow: 0 0 2px #0C2D48;
+    display: none;
+    background-color: #0C2D48;
+}
+
+.dropdown-menuPerfil a{
+    display: block;
+    color: #d1ddef;
+}
+
+.dropdown:hover .dropdown-menuPerfil{
+    display: block;
+}
+
+
+/* Search bar */
+.search input {
+    padding: 10px;
+    border: 1px solid #ECECEB;
+    border-radius: 5px;
+}
+
+.search button {
+    background-color: #0C2D48;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Estilos para os cards de receitas */
+
+.featured-recipes {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+    flex-wrap: wrap; 
+}
+
+.recipe-card {
+    width: 30%; 
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px 0px;
+    text-align: center;
+    margin: 1rem 1rem; /* Espaço entre os cards */
+}
+
+.recipe-card img {
+    max-width: 100%;
+    border-radius: 5px;
+    height: 25rem;
+    width: 25rem;
+}
+
+.recipe-card h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.like-button {
+    background-color: #ff6347; 
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.like-button:hover {
+    background-color: #ff4500; 
+}
+
+.dislike-button {
+    background-color: #145DA0; 
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dislike-button:hover {
+    background-color: #145DA0; 
+}
+
+.recipe-card a.view-recipe-button {
+    display: inline-block;
+    background-color:#189AB4;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 10px;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+}
+
+/* Estilos para a página Saiba Mais*/
+
+.saiba-mais {
+    align-items: left;
+    min-height: 300px;
+}
+
+
+/* Estilos para informações de contato e links sociais podem ser adicionados aqui */
+
+footer {
+    background-color: #0C2D48;
+    color: #ECECEB;
+    padding: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}

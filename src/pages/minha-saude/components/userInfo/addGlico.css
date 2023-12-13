@@ -1,0 +1,20 @@
+.btn {
+  background-color: #6c3fed;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background: rgb(133 93 248);
+}
+
+.btn svg {
+  vertical-align: sub;
+}

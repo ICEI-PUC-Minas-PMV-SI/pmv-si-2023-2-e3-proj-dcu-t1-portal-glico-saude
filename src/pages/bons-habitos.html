@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bons Hábitos</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Include custom CSS -->
+    <link rel="stylesheet" href="../assets/css/bons-habitos.css">
+</head>
+
+<header id="header">
+    <div class="nav">
+        <div class="logo">
+            <img src="../assets/images/logo.png" alt="logo">
+              <a href="../pages/home.html"> <h1>Portal Glico Saúde</h1> </a>
+          </div>
+
+        <div class="menuPerfil">
+            <ul style="margin: 0;">
+                <li class="dropdown">
+                <img src="../assets/images/perfil.png" alt="perfil">
+                <div class="dropdown-menuPerfil">
+                    <a href="../pages/perfil.html">Meus Dados</a>
+                    <a href="../pages/minha-saude">Avaliar saúde</a>
+                    <a href="../pages/receitas-favoritas.html">Receitas Favoritas</a>
+                </div>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+<body>
+    <nav id="navbar" class="navbar navbar-expand-lg container-fluid">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="../pages/home.html">Início</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0);" onclick="showContent('content2')">Atividade Física</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0);" onclick="showContent('content3')">Controle Glicêmico</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0);" onclick="showContent('content4')">Saúde mental</a>
+            </li>
+        </ul>
+    </nav>
+    
+    <div class="main-container">
+    <div id="content1" class="content container mt-4" style="display: block;">
+        <h1 style="text-align: center">A importância de um estilo de vida saudável</h1>
+        <br>
+        <p> Bons hábitos desempenham um papel crucial no manejo da diabetes. Estabelecer uma rotina de alimentação saudável, rica em vegetais, fibras e proteinas magras, pode ajudar a controlar os níveis de glicose no sangue.</p>       
+        <p> Além disso, a pratica regular de exercícios físicos ajuda a melhorar a sensibilidade à insulina e a manter um peso saudável. Monitorar regularmente os níveis de glicose, seguir as recomendações médicas e tomar medicamentos conforme prescritos são essenciais. Também é de suma importância evitar o tabagismo e o consumo de álcool.</p>
+        <p> Cultivar tais hábitos não apenas melhora a qualidade de vida dos portadores de diabetes, mas também contribui para a prevenção de complicações graves a longo prazo. </p>    
+    </div>
+
+    <div id="content2" class="content container mt-4" style="display: none;">
+        <h1 style="text-align: center">Atividade Física</h1>
+        <br>
+        <p>A atividade física é uma ferramenta fundamental para melhorar a qualidade dos portadores de diabetes.  Ao praticar exercícios, os músculos demandam mais glicose, o que ajuda a diminuir os níveis de açúcar no sangue. A prática regular de exercícios também contribui para aumentar a sensibilidade à insulina, permitindo que o corpo utilize a glicose de maneira mais eficiente.  Com isso, há vantagens não apenas para o controle da diabetes, mas também na prevenção de complicações posteriores, como problemas cardiovasculares.</p>                
+        <p>Portanto, a inclusão de exercícios físicos na rotina diária é uma estratégia valiosa no gerenciamento da diabetes, promovendo uma vida mais saudável e ativa.</p>
+        
+    </div>
+
+    <div id="content3" class="content container mt-4" style="display: none;">
+        <h1 style="text-align: center">Controle glicêmico</h1>
+        <br>
+        <p>Medir a glicemia diariamente é fundamental para os diabéticos por várias razões. Em primeiro lugar, fornece um controle rigoroso dos níveis de açúcar no sangue, o que ajuda a tomar decisões imediatas sobre a administração de insulina, medicamentos e ajustes na dieta, contribuindo para evitar oscilações perigosas nos níveis de glicose.</p>                
+        <p>Além disso, com o controle diário é possível observar padrões ao longo do tempo, que também podem servir para auxiliar na individualização do tratamento.</p>
+        <p>Portanto, é crucial que o portador de diabetes mantenha a medição diária para o gerenciamento bem-sucedido do diabetes e a manutenção de uma boa qualidade de vida.</p>
+    </div>
+    
+    <div id="content4" class="content container mt-4" style="display: none;">
+        <h1 style="text-align: center">Saúde mental</h1>
+        <br>        
+        <p>A saúde mental desempenha um papel crucial no contexto do diabetes, uma condição crônica que requer um comprometimento constante com o autogerenciamento. Os desafios diários, como o monitorar os níveis de glicose, manter uma dieta equilibrada e a eventual necessidade de insulina, podem causar estresse e ansiedade.</p>                
+        <p>A preocupação com complicações a longo prazo e as restrições associadas ao diabetes também podem impactar a saúde mental, levando à depressão e a uma qualidade de vida reduzida.</p>
+        <p>É fundamental reconhecer a interconexão entre a saúde mental e a diabetes, e buscar o apoio adequado, seja através de aconselhamento psicológico, grupos de apoio ou técnicas de gerenciamento do estresse, para enfrentar esses desafios com resiliência e manter um equilíbrio emocional que beneficie tanto a mente quanto o corpo.</p>
+    </div>
+    </div>
+
+    <!-- Include Bootstrap JavaScript and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Include custom script -->
+    <script src="../scripts/bons-habitos.js"></script>
+
+    <footer-component></footer-component>
+    <script src="./minha-saude/components/footer/footer.js" type="module"></script>
+</body>
+
+</html>

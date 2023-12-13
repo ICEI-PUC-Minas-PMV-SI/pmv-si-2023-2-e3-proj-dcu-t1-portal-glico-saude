@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relatório</title>
+</head>
+<body>
+  <div>
+    <main class="main">
+      <Head>
+        <title>Relatório</title>
+        <meta name="description" content="Relatório de glicose" />
+        <link rel="icon" href="/favicon.ico" />
+         <!-- Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+        <!-- Css -->
+        <link rel="stylesheet" href="./styles/global.css" />
+        <link rel="stylesheet" href="./styles/index.css" />
+        <link rel="stylesheet" href="./components/navbar/navbar.css" />
+        <link rel="stylesheet" href="./components/footer/footer.css" />
+        <link rel="stylesheet" href="./components/userInfo/userInfo.css" />
+        <link rel="stylesheet" href="./components/quiz/quiz.css" />
+        <link rel="stylesheet" href="./components/chart/barChart.css" />
+        <link rel="stylesheet" href="./components/chart/pieChart.css" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      </Head>
+      <!-- Nav -->
+      <div class="nav">
+        <nav-component></nav-component>
+      </div>
+
+      <div class="container">
+        <header class="report-page-header">
+          <h1>
+            Minha saúde
+          </h1>
+          <div>
+            <quiz-component></quiz-component>
+            <add-glico-component></add-glico-component>
+          </div>
+        </header>
+        <div class="mainContent">
+          <section class="graph">
+            <div class="bar-chart-container">
+              <canvas id="bar-chart"></canvas>
+              <div class="select-wrapper">
+                <label class="selectLabel">Período:</label>
+                <select class="select" id="select-period">
+                  <option value="7">7 dias</option>
+                  <option value="30">1 mês</option>
+                </select>
+              </div>
+            </div>
+            <div class="sectionQuizResult">
+              <canvas id="pieChart" class="pieChart"></canvas>
+              <div class="quizResult">
+              </div>
+            </div>
+        </section>
+          <aside class="infoBox">
+           <user-info-component></user-info-component>
+          </aside>
+        </section>
+        </div>
+      </div>
+        <!-- Footer -->
+        <footer-component></footer-component>
+      </div>
+    </main>
+  </div>
+  <script src="main.js"></script>
+  <script src="./components/navbar/navbar.js"></script>
+  <script src="./components/footer/footer.js" type="module"></script>
+  <script src="./components/quiz/quiz.js" type="module"></script>
+  <script src="./components/chart/barChart.js" type="module"></script>
+  <script src="./components/userInfo/userInfo.js" type="module"></script>
+  <script src="./components/userInfo/addGlico.js" type="module"></script>
+  <script type="module" src="./components/chart/pieChart.js"></script>
+</body>
+</html>
